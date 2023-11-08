@@ -1,0 +1,178 @@
+    <!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="button">блокировка</button>\
+    <input type="text" id="input">
+    <script>
+        let text = document.querySelector('input');
+        let button = document.querySelector('button');
+        button.addEventListener('click', function() {
+            input.disabled = true
+        });
+    </script>
+-->
+
+
+    <button id="button">блокировка</button>
+    <button id="button1">разблокировка</button>
+    <input type="text" id="input">
+    <script>
+        let text = document.querySelector('#input');
+        let button = document.querySelector('#button');
+        let button1 = document.querySelector('#button1');
+        button.addEventListener('click', function() {
+            text.disabled = true
+            console.log(text);
+
+
+        });
+
+        button1.addEventListener('click', function() {
+            text.disabled = false
+            console.log(text);
+        });
+
+    </script>
+
+
+    <!--
+    <button id="button">блокировка</button>\
+    <input type="text" id="input">
+    <script>
+        let text = document.querySelector('#input');
+        let button = document.querySelector('#button');
+        button.addEventListener('click', function() {
+            alerty(text.disabled);
+        });
+    </script>
+
+    <button id="button">блокировка</button>
+    <button id="button1">разблокировка</button>
+    <button id="button3">проверка</button>
+    <input type="text" checked id="input">
+    <script>
+        let text = document.querySelector('#input');
+        let button = document.querySelector('#button');
+        let button1 = document.querySelector('#button1');
+        let button3 = document.querySelector('#button3');
+        button.addEventListener('click', function() {
+            text.checked= true;
+
+
+        });
+
+        button1.addEventListener('click', function() {
+            text.checked = false;
+        });
+        button3.addEventListener('click', function(){
+            if (text.checked) {
+            alert('привет');
+        }   
+            else {
+            alert('пока');
+        }
+        
+        });
+
+
+    </script>
+
+     <input type="checkbox" id="elem">
+     <button id="button">checked</button>
+     <p id="paragraph"></p>
+        <script>
+            let elem = document.querySelector('#elem');
+            let paragraph = document.getElementById('#paragraph');
+            button.addEventListener("click", function(){
+                if (elem.checked = true){
+                    let paragraph = 'привет';
+                    console.log(paragraph);
+                }else{
+                    let paragraph = 'пока';
+                    console.log(paragraph);
+                }
+            });
+        </script>
+    
+        <input type="radio" name="elem" value="1">
+        <input type="radio" name="elem" value="2">
+        <input type="radio" name="elem" value="3">
+        <div id="value"></div>
+        <button id="button">click</button>
+        <script>
+            let radios = document.querySelectorAll('input[type = "radio"]');
+            let value = document.getElementById('#value');
+    
+            button.addEventListener("click", function(){
+                for (let radio of radios) {
+                    if (radio.checked) {
+                        value = radio.value;
+                        console.log(value);
+                    }
+                }
+            });
+        </script>
+        <input id="elem" value="text">
+        <div id="div"></div>
+        <script>
+            let elem = document.querySelector('#elem');
+            elem.addEventListener('change', function() {
+                div = this.value;
+                console.log(div);
+            });
+        </script>
+    
+        <textarea></textarea>
+        <div></div>
+        <script>
+            let textarea = document.querySelector('textarea');
+            let div = document.querySelector('div');
+            textarea.addEventListener('blur', function() {
+                div.textContent = textarea.value;
+            });
+        </script>
+        
+        <input type="checkbox">
+        <div></div>
+        <button>button</button>
+        <script>
+            let checkbox = document.querySelector('input[type = "checkbox"]');
+            let button = document.querySelector('button');
+            let div = document.querySelector('div');
+    
+            button.addEventListener('click', function() {
+                if (checkbox.checked) {
+                    div.value = '111';
+                } else {
+                    div.value = '222';
+                }
+            });
+        </script>
+    
+        <input type="checkbox">
+        <button>button</button>
+    <script>
+        let checkbox = document.querySelector('input[type="checkbox"]');
+        let button = document.querySelector('button');
+    
+        button.addEventListener('click', function() {
+            if (checkbox.checked) {
+                console.log('+++');
+            } else {
+                console.log('---');
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>
