@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="parent"></div>
+
+    <script>
+        let parent = document.querySelector('#parent');
+        let arr = [1, 2, 3, 4, 5];
+
+        for (let elem of arr) {
+            let p = document.createElement('p');
+            p.textContent = elem;       
+            parent.appendChild(p);
+
+            parent.addEventListener("click", function(){
+               p.textContent = parseFloat(p.textContent) + 1;
+            });
+        }
+    </script> -->
+
+
+
+<!-- <ul id="elem"></ul>
+
+<script>
+    let parent =  document.querySelector('#elem');
+    let arr = [1, 2, 3, 4, 5]
+
+    for (let i = 0; i < arr.length; i++) {
+    let li = document.createElement("li");
+    
+    li.addEventListener("click", function(){
+        this.innerText = arr[i];
+
+        if (li.textContent.endsWith != "!"){
+            li.textContent = li.textContent + "!";
+        }
+    });
+
+    elem.appendChild(li);
+    }; 
+</script> -->
+
+<!-- <table id="table"></table>
+
+<script>
+    let table = document.querySelector('#table');
+
+    for (let i = 0; i < 5; i++) {
+    let tr = document.createElement('tr');
+
+    for (let j = 0; j < 5; j++) {
+    let td = document.createElement('td');
+    tr.appendChild(td);
+    }
+
+table.appendChild(tr);
+}
+</script> -->
+
+
+<!-- <table id="table"></table>
+
+<script>
+let table = document.querySelector('#table');
+
+for (let i = 0; i < 10; i++) {
+    let tr = document.createElement('tr');
+
+    for (let j = 0; j < 5; j++) {
+        let td = document.createElement('td');
+        tr.appendChild(td);
+    }
+
+    table.appendChild(tr);
+}
+</script> -->
+
+
+<!-- <table id="table"></table>
+
+<script>
+    let table = document.querySelector('#table');
+
+    for (let i = 0; i < 10; i++) {
+    let tr = document.createElement('tr');
+    
+    for (let j = 0; j < 5; j++) {
+        let td = document.createElement('td');
+        td.textContent = 'x';
+        tr.appendChild(td);
+    }
+
+    table.appendChild(tr);
+    }
+</script> -->
+
+
+<!-- <label for="width">Ширина таблицы:</label>
+<input type="number" id="width" value="5">
+
+<label for="height">Высота таблицы:</label>
+<input type="number" id="height" value="10">
+
+<button onclick="generateTable()">Создать таблицу</button>
+
+<table id="table"></table>
+
+<script>
+function generateTable() {
+    let table = document.querySelector('#table');
+
+
+    let width = document.getElementById('width').value;
+    let height = document.getElementById('height').value;
+
+    for (let i = 0; i < height; i++) {
+        let tr = document.createElement('tr');
+    
+        for (let j = 0; j < width; j++) {
+            let td = document.createElement('td');
+            tr.appendChild(td);
+        }
+    table.appendChild(tr);
+    }
+}
+</script> -->
+
+<table id="table"></table>
+    <script>
+        let table = document.querySelector('#table');
+        let number = 1;
+
+        for (let i = 0; i < 5; i++) {
+            let tr = document.createElement('tr');
+
+            for (let j = 0; j < 5; j++) {
+                let td = document.createElement('td');
+                td.textContent = number;
+                number++;
+                tr.appendChild(td);
+            }
+
+            table.appendChild(tr);
+        }
+    </script>
+
+
+<script>
+    let table = document.querySelector('#table');
+    let number = 2;
+
+    for (let i = 0; i < 5; i++) {
+        let tr = document.createElement('tr');
+
+        for (let j = 0; j < 5; j++) {
+            let td = document.createElement('td');
+            td.textContent = number;
+            number += 2;
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+</script>
+
+
+<table id="table"></table>
+<script>
+    let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]; 
+    let table = document.querySelector('#table');
+
+    for (let subArr of arr) {
+        let tr = document.createElement('tr');
+        
+        for (let elem of subArr) {
+            let td = document.createElement('td');
+            td.textContent = elem;
+            tr.appendChild(td);
+        }
+        
+        table.appendChild(tr);
+    }
+</script>
+
+<table id="table"></table>
+    <script>
+        let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]]; 
+        let table = document.querySelector('#table');
+
+        for (let subArr of arr) {
+            let tr = document.createElement('tr');
+            
+            for (let elem of subArr) {
+                let td = document.createElement('td');
+                td.textContent = elem * elem;
+                tr.appendChild(td);
+            }
+            
+            table.appendChild(tr);
+        }
+    </script>   
+
+<table id="table"></table>
+
+<script>
+    let employees = [
+    {name: 'employee1', age: 30, salary: 400},
+    {name: 'employee2', age: 31, salary: 500},
+    {name: 'employee3', age: 32, salary: 600},
+];
+
+let table = document.getElementById('table');
+    for (let employee of employees) {
+        let tr = document.createElement('tr');
+        
+        let td1 = document.createElement('td');
+        td1.textContent = employee.name;
+        tr.appendChild(td1);
+        
+        let td2 = document.createElement('td');
+        td2.textContent = employee.age;
+        tr.appendChild(td2);
+        //Модифицируйте предыдущую задачу так, чтобы по клику на любую ячейку с возрастом ее содержимое увеличивалось на 1.
+        td2.addEventListener("click", function(){
+            td2.textContent = parseFloat(td2.textContent) + 1;
+        });
+
+        let td3 = document.createElement('td');
+        td3.textContent = employee.salary;
+        tr.appendChild(td3);
+        //Модифицируйте предыдущую задачу так, чтобы по клику на любую ячейку с зарплатой ее содержимое увеличивалось на 10%.
+        td3.addEventListener("click", function(){
+            td3.textContent = parseFloat(td3.textContent) + td3.textContent * 0.1;
+        });
+
+        table.appendChild(tr);
+}
+</script>
+
+<table id="table"></table>
+<button id="button">click-click</button>
+<script>
+    let button = document.querySelector('#button');
+    let table = document.querySelector('#table');
+    let tr = document.createElement('tr');
+
+    button.addEventListener("click", function(){
+        let td = document.createElement('td');
+        tr.appendChild(td);
+        table.appendChild(tr);
+    });
+    
+    
+   
+</script>
+<style>
+    table {
+        border: 1px solid #000;
+        width: 600px;
+        height: 600px;
+        box-sizing: border-box;
+        border-collapse: collapse;
+        margin: 50px auto;
+    }
+
+    tr, td {
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+</style>
+<table id="table">
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<button id="button">click-click</button>
+
+<style>
+    td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+</style>
+
+<script>
+    let button = document.querySelector('#button');
+    let table = document.querySelector('#table');
+    let tr = document.createElement('tr');
+
+    button.addEventListener("click", function(){
+        let td = document.createElement('td');
+        tr.appendChild(td);
+       
+
+        let trs = document.querySelectorAll('#table tr');
+        for (let tr of trs) {
+            let td = document.createElement('td');
+            tr.appendChild(td);
+        }
+    });
+</script>
+
+
+<table id="table"></table>
+<button id="button1">click-click</button>
+<script>
+    let table = document.querySelector('#table');
+    let button1 = document.querySelector('#button1');
+    let number = 1;
+
+    for (let i = 0; i < 5; i++) {
+        let tr = document.createElement('tr');
+
+        for (let j = 0; j < 5; j++) {
+            let td = document.createElement('td');
+            td.textContent = number;
+            number++;
+            tr.appendChild(td);
+        }
+
+        table.appendChild(tr);
+    }
+
+    button1.addEventListener("click", function(){
+        let tds = document.querySelectorAll('#table td');
+
+        for (let td of tds) {
+            td.textContent = parseInt(td.textContent) * 2;
+        }
+    });
+</script>
+
+<style>
+    table {
+        border: 1px solid #000;
+        width: 600px;
+        height: 600px;
+        box-sizing: border-box;
+        border-collapse: collapse;
+        margin: 50px auto;
+    }
+
+    tr, td {
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+</style>
+
+
+<ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<input type="submit" id="button">
+
+<script>
+    let parent = document.getElementById('parent');
+    let button = document.getElementById('button');
+
+    button.addEventListener('click', function(){
+        let li = document.createElement('li');
+        li.textContent = parent.children.length +1;
+        parent.appendChild(li);
+    });
+
+    li.addEventListener('click', function(){
+        this.remove();
+    });
+</script>
+
+<p>Ссылка на удаление элемента на JavaScript  </p>
+<div id="parent">
+    <p id="elem">text</p>
+    <a href="#" id="remove">remove</a>
+</div>
+
+<script>
+let removeLink = document.querySelector('#remove');
+let parentDiv = document.querySelector('#parent');
+
+removeLink.addEventListener('click', function(event) {
+    let elemToBeRemoved = document.querySelector('#elem');
+    if (elemToBeRemoved) {
+        parentDiv.removeChild(elemToBeRemoved);
+    }
+    event.preventDefault();
+});
+</script>
+
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<script>
+    let lis = document.querySelectorAll('ul li');
+    lis.forEach(li => {
+        let removeLink = document.createElement('a');
+        removeLink.href = '#';
+        removeLink.textContent = 'remove';
+        li.appendChild(removeLink);
+
+        removeLink.addEventListener('click', function (event) {
+            li.remove();
+            event.preventDefault();
+        });
+    });
+</script>
+
+<div id="parent">
+    <p id="elem">text</p>
+    <input id="input">
+</div>
+
+<script>
+    let elem = document.querySelector('#elem');
+    let input = document.querySelector('#input');
+
+    input.value = elem.textContent; 
+    input.addEventListener('input', function() {
+        elem.textContent = this.value;
+    });
+</script>
+
+<div id="parent">
+    <p id="elem">text</p>
+</div>
+
+<script>
+    let elem = document.querySelector('#elem');
+
+    elem.addEventListener('click', function() {
+        let input = document.createElement('input');
+        input.value = elem.textContent;
+
+        input.addEventListener('blur', function() {
+            elem.textContent = this.value;
+            this.remove(); 
+        });
+
+        elem.textContent = ''; 
+        elem.appendChild(input); 
+    });
+</script>
+
+<div id="parent">
+    <p id="elem">text</p>
+</div>
+
+<script>
+let elem = document.querySelector('#elem');
+
+function handleEdit() {
+    let input = document.createElement('input');
+    input.value = elem.textContent;
+    
+    elem.textContent = '';
+    elem.appendChild(input);
+    
+    input.addEventListener('blur', function() {
+        elem.textContent = this.value;
+        elem.addEventListener('click', handleEdit); 
+    });
+    
+    elem.removeEventListener('click', handleEdit);
+}
+
+elem.addEventListener('click', handleEdit);
+</script>
+
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<script>
+    let ul = document.querySelector('ul');
+
+    ul.addEventListener('click', function (e) {
+        if (e.target.tagName === 'LI') {
+            let li = e.target;
+            let input = document.createElement('input');
+            input.value = li.textContent;
+
+            input.addEventListener('blur', function () {
+                li.textContent = this.value;
+            });
+
+            li.textContent = '';
+            li.appendChild(input);
+            input.focus(); 
+        }
+    });
+</script>
+
+<div id="parent">
+    <p><span>text1</span></p>
+    <p><span>text2</span></p>
+    <p><span>text3</span></p>
+</div>
+
+<script>
+    let parent = document.getElementById('parent');
+    let paragraphs = parent.getElementsByTagName('p');
+    for (let paragraph of paragraphs) {
+        let removeLink = document.createElement('a');
+        removeLink.href = '#';
+        removeLink.textContent = 'Удалить';
+        paragraph.appendChild(removeLink);
+    }
+    let spans = parent.getElementsByTagName('span');
+    for (let span of spans) {
+        span.addEventListener('click', function() {
+            let input = document.createElement('input');
+            input.value = span.textContent;
+
+            input.addEventListener('blur', function() {
+                span.textContent = this.value;
+            });
+
+            span.textContent = '';
+            span.appendChild(input);
+            input.focus();
+        });
+    }
+</script>
+
+<div id="parent">
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+</div>
+
+<script>
+    let parent = document.getElementById('parent');
+    let paragraphs = parent.getElementsByTagName('p');
+    for (let paragraph of paragraphs) {
+        let span = document.createElement('span');
+        span.textContent = paragraph.textContent;
+        paragraph.textContent = '';
+        paragraph.appendChild(span);
+
+        span.addEventListener('click', function() {
+            let input = document.createElement('input');
+            input.value = span.textContent;
+
+            input.addEventListener('blur', function() {
+                span.textContent = this.value;
+            });
+
+            span.textContent = '';
+            span.appendChild(input);
+            input.focus();
+        });
+    }
+    paragraphs = parent.getElementsByTagName('p');
+    for (let paragraph of paragraphs) {
+        let removeLink = document.createElement('a');
+        removeLink.href = '#';
+        removeLink.textContent = 'Удалить';
+        paragraph.appendChild(removeLink);
+    }
+</script>
+
+<p>text1</p>
+<p>text2</p>
+<p>text3</p>
+
+<script>
+    let paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach(paragraph => {
+        let link = document.createElement('a');
+        link.href = '#';
+        link.textContent = 'Перечеркнуть';
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            paragraph.style.textDecoration = 'line-through';
+        });
+        paragraph.appendChild(link);
+    });
+</script>
+
+<p>text1</p>
+<p>text2</p>
+<p>text3</p>
+<script>
+    let paragraphs = document.querySelectorAll('p');
+
+    paragraphs.forEach(paragraph => {
+        let link = document.createElement('a');
+        link.href = '#';
+        link.textContent = 'Перечеркнуть';
+
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            paragraph.style.textDecoration = 'line-through';
+            paragraph.removeChild(link);
+        });
+
+        paragraph.appendChild(link);
+    });
+</script>
+
+<p id="elem">text</p>
+<input type="submit" id="toggle" value="ttt">
+
+<script>
+    let elem = document.getElementById('elem');
+    let toggleButton = document.querySelector('#toggle');
+
+    toggleButton.addEventListener('click', function() {
+        if (elem.classList.contains('hidden')) {
+            elem.classList.remove('hidden');
+        } else {
+            elem.classList.add('hidden');
+        }
+    });
+</script>
+
+
+
+<p id="elem1">1</p><button id="button" data-elem="elem1">toggle</button>
+<p id="elem2">2</p><button id="button"data-elem="elem2">toggle</button>
+<p id="elem3">3</p><button id="button"data-elem="elem3">toggle</button>
+
+<script>
+    /*let buttons = document.querySelectorAll('button');
+
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            let elem = document.querySelector('#' + this.dataset.elem);
+            elem.classList.toggle('hidden');
+        });
+    }
+
+    let buttons = document.querySelectorAll('button');
+    let elems = document.getElementsByTagName('p');
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', function() {
+            elems[i].classList.toggle('hidden');
+        });
+    }
+
+    let buttons = document.querySelectorAll('button');
+
+    for (let button of buttons) {
+        button.addEventListener('click', function() {
+            let paragraph = this.previousElementSibling;
+            if (paragraph) {
+                paragraph.classList.toggle('hidden');
+            }
+        });
+    }*/
+    
+</script>
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<style>
+    .active {
+    background: red;
+}
+</style>
+<script>
+    let listItems = document.querySelectorAll('ul li');
+
+    listItems.forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.add('active');
+        });
+    });
+
+</script>
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<style>
+    .active {
+    background: red;
+}
+</style>
+<script>
+    let listItems = document.querySelectorAll('ul li');
+
+    listItems.forEach(item => {
+        item.addEventListener('click', function() {
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+            } else {
+                this.classList.add('active');
+            }
+        });
+    });
+</script>
+<script>
+    let array = ['item1', 'item2', 'item3'];
+    let ul = document.createElement('ul');
+
+    array.forEach(item => {
+        let li = document.createElement('li');
+        li.textContent = item;
+        ul.appendChild(li);
+    });
+    document.body.appendChild(ul);
+</script>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    let ul = document.querySelector('ul');
+    ul.addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI') {
+            let input = document.createElement('input');
+            input.value = e.target.textContent;
+            e.target.textContent = '';
+            e.target.appendChild(input);
+            input.focus();
+            input.addEventListener('blur', function() {
+                e.target.textContent = input.value;
+            });
+        }
+    });
+</script>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    let ul = document.querySelector('ul');
+    let input = document.createElement('input');
+    input.placeholder = 'Enter a new item';
+    let addButton = document.createElement('button');
+    addButton.textContent = 'Add';
+    addButton.addEventListener('click', function() {
+        let newItem = document.createElement('li');
+        newItem.textContent = input.value;
+        ul.appendChild(newItem);
+        input.value = '';
+    });
+    document.body.appendChild(inputs);
+    document.body.appendChild(addButton);
+</script>
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script>
+    let ul = document.querySelector('ul');
+    ul.addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI') {
+            let deleteLink = document.createElement('a');
+            deleteLink.href = '#';
+            deleteLink.textContent = 'удалить';
+            deleteLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.target.parentNode.remove();
+            });
+            e.target.appendChild(deleteLink);
+        }
+    });
+</script>
+
+<ul>
+    <li>5t</li>
+    <li>5t</li>
+    <li>5t</li>
+</ul>
+<script>
+    let ul = document.querySelector('ul');
+    ul.addEventListener('click', function(e) {
+        if (e.target.tagName === 'LI') {
+            let strikeLink = document.createElement('a');
+            strikeLink.href = '#';
+            strikeLink.textContent = 'перечеркнуть';
+            strikeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.target.parentNode.style.textDecoration = 'line-through';
+            });
+                e.target.appendChild(strikeLink);
+        }
+    });
+</script>
+
+
+
+<script>
+    let employees = [
+{name: 'employee1', age: 30, salary: 400},
+{name: 'employee2', age: 31, salary: 500},
+{name: 'employee3', age: 32, salary: 600},
+];
+
+let table = document.createElement('table');
+let thead = table.createTHead();
+let tbody = table.createTBody();
+
+let headerRow = thead.insertRow();
+for (let key in employees[0]) {
+    let th = document.createElement('th');
+    th.textContent = key;
+    headerRow.appendChild(th);
+}
+
+employees.forEach(employee => {
+    let row = tbody.insertRow();
+    for (let key in employee) {
+        let cell = row.insertCell();
+        cell.textContent = employee[key];
+    }
+});
+
+document.body.appendChild(table);
+
+let tds = document.querySelectorAll('table td');
+
+tds.forEach(td => {
+    td.addEventListener('click', function() {
+        let input = document.createElement('input');
+        input.value = td.textContent;
+        td.textContent = '';
+        td.appendChild(input);
+        input.focus();
+        input.addEventListener('blur', function() {
+            td.textContent = input.value;
+        });
+    });
+});
+
+let rows = document.querySelectorAll('table tbody tr');
+
+    rows.forEach(row => {
+        let deleteCell = row.insertCell();
+        let deleteLink = document.createElement('a');
+        deleteLink.href = '#';
+        deleteLink.textContent = 'удалить';
+        deleteCell.appendChild(deleteLink);
+
+        deleteLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            row.remove();
+        });
+    });
+
+    let addEmployeeButton = document.createElement('button');
+    addEmployeeButton.textContent = 'Добавить работника';
+    let nameInput = document.createElement('input');
+    nameInput.placeholder = 'Имя';
+    let ageInput = document.createElement
+
+    ('input');
+    ageInput.placeholder = 'Возраст';
+    let salaryInput = document.createElement('input');
+    salaryInput.placeholder = 'Зарплата';
+
+    addEmployeeButton.addEventListener('click', function() {
+        let name = nameInput.value;
+        let age = ageInput.value;
+        let salary = salaryInput.value;
+
+        if (name && age && salary) {
+            let table = document.querySelector('table');
+            let row = table.insertRow();
+            let nameCell = row.insertCell();
+            nameCell.textContent = name;
+            let ageCell = row.insertCell();
+            ageCell.textContent = age;
+            let salaryCell = row.insertCell();
+            salaryCell.textContent = salary;
+        }
+
+        nameInput.value = '';
+        ageInput.value = '';
+        salaryInput.value = '';
+    });
+
+    document.body.appendChild(nameInput);
+    document.body.appendChild(ageInput);
+    document.body.appendChild(salaryInput);
+    document.body.appendChild(addEmployeeButton);
+
+</script>
+
+<style>
+    td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+</style>
+
+
+
+let employees = [
+{name: 'employee1', age: 30, salary: 400},
+{name: 'employee2', age: 31, salary: 500},
+{name: 'employee3', age: 32, salary: 600},
+];
+Выведите на экран каждого работника в своем теге li тега ul.</p>
+<script>
+let employees = [
+{name: 'employee1', age: 30, salary: 400},
+{name: 'employee2', age: 31, salary: 500},
+{name: 'employee3', age: 32, salary: 600},
+];
+
+let ul = document.createElement('ul');
+
+employees.forEach(employee => {
+let li = document.createElement('li');
+li.textContent = `Имя: ${employee.name}, Возраст: ${employee.age}, Зарплата: ${employee.salary}`;
+ul.appendChild(li);
+});
+
+document.body.appendChild(ul);
+
+ul.addEventListener('click', function(e) {
+if (e.target.tagName === 'LI') {
+let input = document.createElement('input');
+input.value = e.target.textContent;
+e.target.textContent = '';
+e.target.appendChild(input);
+input.focus();
+input.addEventListener('blur', function() {
+e.target.textContent = input.value;
+});
+}
+});
+
+ul.addEventListener('click', function(e) {
+if (e.target.tagName === 'LI') {
+let deleteLink = document.createElement('a');
+deleteLink.href = '#';
+deleteLink.textContent = 'удалить';
+deleteLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.target.parentNode.remove();
+});
+e.target.appendChild(deleteLink);
+}
+});
+
+let form = document.createElement('form');
+let nameInput = document.createElement('input');
+nameInput.placeholder = 'Имя';
+let ageInput = document.createElement('input');
+ageInput.placeholder = 'Возраст';
+let salaryInput = document.createElement('input');
+salaryInput.placeholder = 'Зарплата';
+let addButton = document.createElement('button');
+addButton.textContent = 'Добавить';
+
+addButton.addEventListener('click', function(e) {
+e.preventDefault();
+let name = nameInput.value;
+let age = ageInput.value;
+let salary = salaryInput.value;
+if (name && age && salary) {
+let li = document.createElement('li');
+li.textContent = `Имя: ${name}, Возраст: ${age}, Зарплата: ${salary}`;
+ul.appendChild(li);
+nameInput.value = '';
+ageInput.value = '';
+salaryInput.value = '';
+}
+});
+
+form.appendChild(nameInput);
+form.appendChild(ageInput);
+form.appendChild(salaryInput);
+form.appendChild(addButton);
+document.body.appendChild(form);
+</script>
+</body>
+</html>
