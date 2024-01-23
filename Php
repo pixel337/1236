@@ -1,0 +1,43 @@
+<?php
+// Четные задания через Cookies
+
+// Задание 1
+if(isset($_COOKIE['text_color']) && isset($_COOKIE['bg_color'])){
+    echo '<body style="color:'.$_COOKIE['text_color'].'; background-color:'.$_COOKIE['bg_color'].';">';
+} else {
+    echo '<body>';
+}
+?>
+
+<form action="test.php" method="post">
+    <label for="text_color">Выберите цвет текста:</label>
+    <select name="text_color">
+        <option value="black">Черный</option>
+        <option value="red">Красный</option>
+        <option value="blue">Синий</option>
+        <option value="green">Зеленый</option>
+    </select>
+
+    <label for="bg_color">Выберите цвет фона:</label>
+    <select name="bg_color">
+        <option value="white">Белый</option>
+        <option value="grey">Серый</option>
+        <option value="yellow">Желтый</option>
+        <option value="orange">Оранжевый</option>
+    </select>
+
+    <input type="submit" value="Отправить">
+</form>
+</body>
+
+
+
+<?php
+// Задание 1
+if(isset($_POST['text_color']) && isset($_POST['bg_color'])){
+    setcookie('text_color', $_POST['text_color'], time() + 3600, '/');
+    setcookie('bg_color', $_POST['bg_color'], time() + 3600, '/');
+}
+
+// Ваш код для test.php
+?>
